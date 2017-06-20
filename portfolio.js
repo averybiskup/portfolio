@@ -1,16 +1,23 @@
 $(document).ready(function() {
 
   function addVis() {
-    $("body").toggleClass("vis");
-    $("html").toggleClass("vis");
+    if ($("body").hasClass("vis") || $("html").hasClass("vis")) {
+      $("body").removeClass("vis");
+      $("html").removeClass("vis");
+    }
+    else {
+      $("body").addClass("vis");
+      $("html").addClass("vis");
+    }
   }
 
 
   function pointer1(div) {
+    $(div).toggleClass("opened");
     function pointer2() {
       $(div).toggleClass("opened");
     }
-    setTimeout(pointer2, 25);
+    setTimeout(pointer2, 2500);
   }
 
   var divList = [".home", ".aboutMe", ".skills", ".projects", ".contact"];
@@ -82,20 +89,29 @@ $(document).ready(function() {
   $(".aboutMe").on("click", function openAbout() {
     pointer1(".aboutMe");
     addOpen(".aboutMe");
+    $(".about").toggleClass("open");
     function place() {
       $(".flexContainer").toggleClass("aboutMe1");
       $(".aboutMe").toggleClass("local");
     }
+
+
     function showText() {
-      $(".about").toggleClass("open");
+      if ($(".about").hasClass("open")) {
+        $(".about").addClass("open2");
+      }
+      else {
+        $(".about").removeClass("open2");
+      }
     }
-    setTimeout(place, 1000);
+    setTimeout(place, 1);
     if ($(".aboutMe").hasClass("local")) {
       setTimeout(showText, 1);
     }
     else {
-      setTimeout(showText, 2000);
+      setTimeout(showText, 1000);
     }
+
 
     $(".return").on("click", function() {
       openAbout();
@@ -114,12 +130,12 @@ $(document).ready(function() {
     function showText1() {
       $(".list").toggleClass("open");
     }
-    setTimeout(place, 1000);
+    setTimeout(place, 1);
     if ($(".skills").hasClass("local")) {
       setTimeout(showText1, 1);
     }
     else {
-      setTimeout(showText1, 2000);
+      setTimeout(showText1, 1000);
     }
     function slideItems() {
       $(".flexIcons").toggleClass("open");
@@ -162,18 +178,18 @@ $(document).ready(function() {
       $(".flexContainer").toggleClass("projects1");
       $(".projects").toggleClass("local");
     }
-    setTimeout(place, 1000);
+    setTimeout(place, 1);
 
     $(".return").on("click", function() {
-      setTimeout(openProjects, 1000);
+      setTimeout(openProjects, 1);
       displayImages();
       addVis();
     });
 
     $(".list2").toggleClass("open");
-    var displayImages() => ($(".list2").hasClass("open")) ? $(".flexImages").toggleClass("open") : "";
+    let displayImages = () => ($(".list2").hasClass("open")) ? $(".flexImages").toggleClass("open") : "";
 
-    setTimeout(displayImages, 2000);
+    setTimeout(displayImages, 1000);
 
     if ($(".list2").hasClass("open")) {addVis()}
 
@@ -187,7 +203,7 @@ $(document).ready(function() {
       $(".contact").toggleClass("local");
       $(".contact").toggleClass("hover");
     }
-    setTimeout(place, 1000);
+    setTimeout(place, 1);
 
     $(".return").on("click", function() {
       openContact();

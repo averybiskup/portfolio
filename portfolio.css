@@ -61,13 +61,13 @@ div:hover {
   -webkit-padding-end: 0;
   font-family: Ubuntu, sans-serif;
   transform: translateX(0%);
-  transition: transform 0.6s ease-out, background-color 0.6s ease;
+  transition: transform 0.6s ease-out;
   flex-shrink: 0;
   position: relative; }
 
 .flexItem:hover {
   color: #D4D339;
-  opacity: 0.95;
+  opacity: 1;
   cursor: pointer; }
 
 .return {
@@ -142,6 +142,13 @@ div:hover {
 .backBtn {
   font-size: 100px;
   display: block; }
+
+.about.textBlock.open.open2 {
+  transform: translateX(0%); }
+
+.about.textBlock.open {
+  transform: translateX(200%);
+  transition: transform 1s ease; }
 
 .about.open {
   display: block;
