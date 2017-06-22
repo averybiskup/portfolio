@@ -1,3 +1,5 @@
+/* OLD PORTFOLIO (NOT USED ANYMORE) */
+
 
 $white: #FDFDFD;
 $red: #CA3B35;
@@ -14,17 +16,21 @@ $black: #150415;
   user-select: $select;
 }
 
-
 body {
   margin: 0;
   background-color: $lightGreen !important;
-  overflow: hidden;
   height: 100%;
   transition: background-color 1s ease;
+  max-width: 100%;
+}
+.siteWrapper {
+  overflow: hidden;
+  max-width: 100%;
 }
 .vis {
-  overflow-y: visible;
-  background-color: $darkGreen;
+  overflow: hidden;
+  background-color: $darkGreen !important;
+  max-width: 100%;
 }
 .behind {
   opacity: 0.1;
@@ -33,6 +39,9 @@ body {
 }
 div:hover {
   cursor: default;
+}
+.local {
+  pointer-events: none;
 }
 
 
@@ -51,6 +60,7 @@ div:hover {
 }
 .flexContainer.aboutMe1 {
   background-color: $red;
+  display: fixed !important;
 }
 .flexContainer.skills1 {
   background-color: $green;
@@ -159,7 +169,7 @@ div:hover {
   background-color: $red;
 }
 .aboutMe.open {
-  transform: translateX(100%);
+  transform: translateX(-100%);
 }
 .aboutMe.local {
   transform: translateY(-100%);
@@ -257,7 +267,7 @@ i:hover {
 }
 
 .projects.open {
-  transform: translateX(100%);
+  transform: translateX(-100%);
 }
 .projects.local {
   transform: translateY(-300%);
@@ -353,6 +363,15 @@ i:hover {
   margin-top: 15%;
   margin-left: 25%;
   transition: opacity 1s ease;
+}
+a.projectLink {
+  color: white;
+  text-decoration: none;
+}
+a.projectLink:hover, a.projectLink:active, a.projectLink:focus, a.projectLink:visited {
+  color: inherit !important;
+  outline: none !important;
+  text-decoration: none !important;
 }
 
 

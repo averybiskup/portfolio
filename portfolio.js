@@ -1,3 +1,5 @@
+// OLD PORTFOLIO (NOT USED ANYMORE)
+
 $(document).ready(function() {
 
   function addVis() {
@@ -32,7 +34,7 @@ $(document).ready(function() {
   function setReturn() {
     if ($(".return").hasClass("open") == false) {
       setReturn1();
-      setTimeout(setReturn2, 4000);
+      setTimeout(setReturn2, 3000);
     }
     else {
       setReturn2();
@@ -44,6 +46,7 @@ $(document).ready(function() {
     for (var i = 0; i < divList.length; i++) {
       if (divList[i] !== div) {
         $(divList[i]).toggleClass("open");
+        console.log(divList[i], div);
       }
     }
     setReturn();
@@ -127,28 +130,17 @@ $(document).ready(function() {
       $(".flexContainer").toggleClass("skills1");
       $(".skills").toggleClass("local");
     }
-    function showText1() {
-      $(".list").toggleClass("open");
-    }
+    let showText1 = () => $(".list").toggleClass("open");
+
     setTimeout(place, 1);
-    if ($(".skills").hasClass("local")) {
-      setTimeout(showText1, 1);
-    }
-    else {
-      setTimeout(showText1, 1000);
-    }
-    function slideItems() {
-      $(".flexIcons").toggleClass("open");
-    }
+
+    ($(".skills").hasClass("local")) ? setTimeout(showText1, 1) : setTimeout(showText1, 1000);
+
+    let slideItems = () => $(".flexIcons").toggleClass("open");
     setTimeout(slideItems, 2500);
 
     for (var n = 0; n < langNames1.length; n++) {
-      if ($("." + langNames1[n]).hasClass("dev") == false) {
-        $("." + langNames1[n]).toggleClass("dev");
-        $("." + langNames1[n]).toggleClass("devicon-" + langNames1[n] + "-plain");
-        $("." + langNames1[n]).toggleClass("hoverOn");
-        $("." + langNames1[n]).html("");
-      }
+      if ($("." + langNames1[n]).hasClass("dev") == false) { $("." + langNames1[n]).toggleClass("dev").toggleClass("devicon-" + langNames1[n] + "-plain").toggleClass("hoverOn").html("") }
     }
 
     $("i").on("click", function() {
