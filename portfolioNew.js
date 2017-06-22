@@ -1,3 +1,5 @@
+// CURRENT PORTFOLIO
+
 $(document).ready(function() {
   console.log("no");
   if ($("#navLi").children().css("display") == "none") {
