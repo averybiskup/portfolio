@@ -58,7 +58,7 @@ ul#navLi li:hover {
   /* NAVIGTION BAR */
   #dropNav {
     transform: translateY(-600px);
-    transition: transform 0.6s ease-out;
+    transition: transform 4s ease-out;
     background-color: #CA3B35 !important;
     width: 100%;
     padding-right: 20px; }
