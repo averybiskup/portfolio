@@ -10,52 +10,128 @@ $black: #150415;
 body {
   background-color: $white;
 }
-.navbar {
-  background-color: $green;
+a {
+  color: inherit !important;
+  text-decoration: none !important;
 }
+
+a.navItem:hover, a.navItem:active, a.navItem:focus, a.visited{
+  color: inherit !important;
+  text-decoration: none !important;
+  opacity: 0.7;
+}
+
+
+
+
+
+/* NAVIGATION BAR */
 .nav {
-  background-color: $green;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+  background-color: $red;
   height: 80px;
+  position: fixed;
+  z-index: -100;
 }
-ul#navLi {
+i.nav-toggle {
+  display: none !important;
+}
+#dropNav {
   padding: 0;
   margin: 20px 20px 0px 0px;
   text-align: right;
 }
+ul#navLi {
+  margin-top: 18px !important;
+  display: inline !important;
+}
 ul#navLi li {
+  color: $black;
   text-decoration: none;
   list-style: none;
   display: inline;
-  padding-left: 15px;
+  margin: 20px 20px 0px 10px;
   font-size: 25px;
+  font-family: Quicksand, sans-serif;
+  font-weight: lighter;
+  -webkit-padding-start: 0 !important;
 }
-.navItem {
-  color: $white;
+ul#navLi li:hover {
+  border-bottom: 0.1px solid $black;
+  border-top: 0.1px solid $black;
 }
-a.navItem:hover, a.navItem:active, a.navItem:focus, a.visited{
-  color: $white;
-  text-decoration: none;
-  opacity: 0.7;
-}
-.navToggle {
-  display: none !important;
-  margin-top: 25px;
-  font-size: 30px !important;
-  border: 2px solid $white;
-  background-color: rgba(225,225,225,0.1);
-  padding: 2px;
+#avery {
+  display: inline-block;
+  align: left;
+  position: absolute;
 }
 
 
 
-@media screen and (max-width:800px), (max-device-width:800px) {
-  ul#navLi li {
-    display: none;
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:900px), (max-device-width:900px) {
+
+  /* NAVIGTION BAR */
+  #dropNav {
+    transform: translateY(-600px);
+    transition: transform 0.3s ease-out;
+    background-color: $red !important;
+    width: 100%;
+    padding-right: 20px;
   }
-  li .fa {
-    display: inline !important;
+  #dropNav.down {
+    transform: translateY(50px);
   }
-  .navTog {
-    display: inline !important;
+  ul#navLi {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    z-index: -100;
   }
+  .nav {
+    position: fixed;
+    z-index: 100;
+    border-bottom: 1px solid $black;
+  }
+  i.nav-toggle {
+    display: inline-block !important;
+    color: $black;
+    font-size: 30px !important;
+    border: 2px solid $black;
+    background-color: rgba(0,0,0,0.3);
+    padding: 2px 6px 2px 6px;
+    border-radius: 4px;
+    top: 0;
+    right: 0;
+    margin: 20px 25px 0px 0px;
+
+  }
+  i.nav-toggle:hover {
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .navWrapper {
+    text-align: right;
+  }
+
+
+
+
+
+
+
+
 }
