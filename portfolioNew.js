@@ -19,21 +19,22 @@ $(document).ready(function() {
     if (test == 0) {
       $('.navItem').css('display', 'block')
       $('#dropNav').css('display', 'block')
-      setTimeout(pullDown, 1, '#dropNav')
+      setTimeout(pullDown, 200, '#dropNav')
     }
   });
   let to;
-
+  let rad = 0;
+  let divClass
   $('.navItem').hover(function() {
-    borderRad('.' + $(this).attr('class').split(' ')[1])
-    to = setInterval(borderRad, 500)
-    console.log('.' + ($(this).attr('class').split(' ')[1]))
+    rad = 0;
+    divClass = '.' + $(this).attr('class').split(' ')[1]
+    borderRad(divClass)
+    to = setInterval(borderRad, 500, divClass)
+    //console.log('.' + ($(this).attr('class').split(' ')[1]))
   }, function() {
     clearInterval(to)
-    $(this).parents('li').hover().css('border-radius', 0)
   });
 
-  var rad = 0;
   function borderRad(div) {
     rad++
     if (rad <= 50) {
