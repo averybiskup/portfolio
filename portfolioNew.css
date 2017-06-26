@@ -1,6 +1,6 @@
 /* CURRENT PORTFOLIO */
 body {
-  background-color: #FDFDFD; }
+  background-color: #FDFDFD !important; }
 
 a {
   color: inherit !important;
@@ -11,7 +11,14 @@ a.navItem:hover, a.navItem:active, a.navItem:focus, a.visited {
   text-decoration: none !important;
   opacity: 0.7; }
 
+.container-fluid {
+  margin: 0px !important;
+  padding: 0px !important; }
+
 /* NAVIGATION BAR */
+header {
+  position: fixed; }
+
 .nav {
   top: 0;
   right: 0;
@@ -43,25 +50,72 @@ ul#navLi li {
   font-size: 25px;
   font-family: Quicksand, sans-serif;
   font-weight: lighter;
-  -webkit-padding-start: 0 !important; }
+  -webkit-padding-start: 0 !important;
+  padding-top: 15px;
+  padding-bottom: 15px; }
 
 ul#navLi li:hover {
-  border-bottom: 0.1px solid #150415;
-  border-top: 0.1px solid #150415; }
+  border: none; }
+
+ul#navLi li a {
+  border: 2px solid #CA3B35; }
 
 #avery {
   display: inline-block;
   align: left;
   position: absolute; }
 
+/* HOME SECTION STYLING */
+#home {
+  margin-top: 100px;
+  display: block;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+
+.par {
+  color: #150415;
+  font-size: 20px;
+  font-family: Verdana; }
+
+/* SKILLS SECTION STYLING */
+#skills {
+  background-color: #4D8471;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100% !important;
+  padding: 0px 20px 100px 20px; }
+
+#skillsTitle {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 50px;
+  font-family: Quicksand;
+  color: #150415; }
+
+.flexIcon {
+  padding: 20px;
+  color: #FDFDFD;
+  border: 2px solid #4D8471; }
+
+.flexIcon:hover {
+  color: #4D8471;
+  background-color: #FDFDFD;
+  border: 2px solid #FDFDFD;
+  border-radius: 20px; }
+
+.dev {
+  font-size: 100px; }
+
 @media screen and (max-width: 900px), (max-device-width: 900px) {
   /* NAVIGTION BAR */
   #dropNav {
     transform: translateY(-600px);
-    transition: transform 4s ease-out;
+    transition: transform 0.5s ease-out;
     background-color: #CA3B35 !important;
     width: 100%;
-    padding-right: 20px; }
+    padding-right: 20px;
+    position: fixed; }
 
   #dropNav.down {
     transform: translateY(50px); }
@@ -70,6 +124,9 @@ ul#navLi li:hover {
     margin-top: 0px;
     margin-bottom: 10px;
     z-index: -100; }
+
+  ul#navLi li a:hover {
+    border: none; }
 
   .nav {
     position: fixed;

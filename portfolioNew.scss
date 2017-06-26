@@ -8,7 +8,7 @@ $brown: #31282B;
 $black: #150415;
 
 body {
-  background-color: $white;
+  background-color: $white !important;
 }
 a {
   color: inherit !important;
@@ -20,12 +20,18 @@ a.navItem:hover, a.navItem:active, a.navItem:focus, a.visited{
   text-decoration: none !important;
   opacity: 0.7;
 }
-
+.container-fluid {
+  margin: 0px !important;
+  padding: 0px !important;
+}
 
 
 
 
 /* NAVIGATION BAR */
+header {
+  position: fixed;
+}
 .nav {
   top: 0;
   right: 0;
@@ -58,10 +64,15 @@ ul#navLi li {
   font-family: Quicksand, sans-serif;
   font-weight: lighter;
   -webkit-padding-start: 0 !important;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 ul#navLi li:hover {
-  border-bottom: 0.1px solid $black;
-  border-top: 0.1px solid $black;
+  border: none;
+}
+
+ul#navLi li a {
+  border: 2px solid $red;
 }
 #avery {
   display: inline-block;
@@ -73,14 +84,59 @@ ul#navLi li:hover {
 
 
 
+/* HOME SECTION STYLING */
+#home {
+  margin-top: 100px;
+  display: block;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.par {
+  color: $black;
+  font-size: 20px;
+  font-family: Verdana;
+}
+
+
+
+
+/* SKILLS SECTION STYLING */
+#skills {
+  background-color: $green;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100% !important;
+  padding: 0px 20px 100px 20px;
+}
+#skillsTitle {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 50px;
+  font-family: Quicksand;
+  color: $black;
+}
+.flexIcon {
+  padding: 20px;
+  color: $white;
+  border: 2px solid $green;
+}
+.flexIcon:hover {
+  color: $green;
+  background-color: $white;
+  border: 2px solid $white;
+  border-radius: 20px;
+}
+.dev {
+  font-size: 100px;
+}
 
 
 
 
 
-
-
-
+@media screen and (min-width:1200px), (min-device-width:1200px) {
+}
 
 
 @media screen and (max-width:900px), (max-device-width:900px) {
@@ -88,10 +144,11 @@ ul#navLi li:hover {
   /* NAVIGTION BAR */
   #dropNav {
     transform: translateY(-600px);
-    transition: transform 4s ease-out;
+    transition: transform 0.5s ease-out;
     background-color: $red !important;
     width: 100%;
     padding-right: 20px;
+    position: fixed;
   }
   #dropNav.down {
     transform: translateY(50px);
@@ -100,6 +157,9 @@ ul#navLi li:hover {
     margin-top: 0px;
     margin-bottom: 10px;
     z-index: -100;
+  }
+  ul#navLi li a:hover {
+    border: none;
   }
   .nav {
     position: fixed;
@@ -117,7 +177,6 @@ ul#navLi li:hover {
     top: 0;
     right: 0;
     margin: 20px 25px 0px 0px;
-
   }
   i.nav-toggle:hover {
     background-color: transparent;
@@ -126,12 +185,8 @@ ul#navLi li:hover {
   .navWrapper {
     text-align: right;
   }
-
-
-
-
-
-
-
-
+}
+@media screen and (max-width:600px), (max-device-width:600px) {
+}
+@media screen and (max-width:320px), (max-device-width:320px) {
 }
