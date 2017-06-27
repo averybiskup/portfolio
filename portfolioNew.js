@@ -25,20 +25,22 @@ $(document).ready(function() {
     }
   });
 
+
+
+  let toggleBorder = function(value) {
+    setTimeout(addBorder, 1, divClass, value, 'border-right')
+    setTimeout(addBorder, 75, divClass, value, 'border-top')
+    setTimeout(addBorder, 150, divClass, value, 'border-left')
+    setTimeout(addBorder, 225, divClass, value, 'border-bottom')
+  }
   let to;
   let rad = 0;
   let divClass;
   $('.navItem').hover(function() {
     divClass = '.' + $(this).attr('class').split(' ')[1]
-    addBorder(divClass, 0, 'border-bottom')
-    setTimeout(addBorder, 50, divClass, 0, 'border-right')
-    setTimeout(addBorder, 100, divClass, 0, 'border-top')
-    setTimeout(addBorder, 150, divClass, 0, 'border-left')
+    toggleBorder(0)
   }, function() {
-    setTimeout(addBorder, 1, divClass, 1, 'border-right')
-    setTimeout(addBorder, 50, divClass, 1, 'border-top')
-    setTimeout(addBorder, 100, divClass, 1, 'border-left')
-    setTimeout(addBorder, 150, divClass, 1, 'border-bottom')
+    toggleBorder(1)
   })
 
   let addBorder = function(div, test, dir) { (test == 0) ? $(div).hover().css(dir, '2px solid black') : $(div).hover().css(dir, '2px solid transparent') }
