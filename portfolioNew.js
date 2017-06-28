@@ -29,18 +29,23 @@ $(document).ready(function() {
 
   let toggleBorder = function(value) {
     setTimeout(addBorder, 1, divClass, value, 'border-right')
-    setTimeout(addBorder, 75, divClass, value, 'border-top')
-    setTimeout(addBorder, 150, divClass, value, 'border-left')
-    setTimeout(addBorder, 225, divClass, value, 'border-bottom')
-  }
+    setTimeout(addBorder, 100, divClass, value, 'border-top')
+    setTimeout(addBorder, 200, divClass, value, 'border-left')
+    setTimeout(addBorder, 300, divClass, value, 'border-bottom')
+  };
+
   let to;
   let rad = 0;
   let divClass;
   $('.navItem').hover(function() {
-    divClass = '.' + $(this).attr('class').split(' ')[1]
-    toggleBorder(0)
+    if ($('#dropNav').hasClass('down') == false) {
+      divClass = '.' + $(this).attr('class').split(' ')[1]
+      toggleBorder(0)
+    }
   }, function() {
-    toggleBorder(1)
+    if ($('#dropNav').hasClass('down') == false) {
+      toggleBorder(1)
+    }
   })
 
   let addBorder = function(div, test, dir) { (test == 0) ? $(div).hover().css(dir, '2px solid black') : $(div).hover().css(dir, '2px solid transparent') }

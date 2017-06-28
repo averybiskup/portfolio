@@ -51,11 +51,12 @@ ul#navLi li {
   font-family: Quicksand, sans-serif;
   font-weight: lighter;
   -webkit-padding-start: 0 !important;
-  padding-top: 15px;
-  padding-bottom: 15px; }
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: 100px; }
 
-ul#navLi li:hover {
-  border: none; }
+.navItem {
+  border-radius: 5px; }
 
 ul#navLi li a {
   border: 2px solid #CA3B35; }
@@ -84,7 +85,8 @@ ul#navLi li a {
   flex-wrap: wrap;
   flex-direction: row;
   width: 100% !important;
-  padding: 0px 20px 100px 20px; }
+  padding: 0px 20px 100px 50px;
+  flex-basis: 1; }
 
 #skillsTitle {
   text-align: center;
@@ -99,10 +101,7 @@ ul#navLi li a {
   border: 2px solid #4D8471; }
 
 .flexIcon:hover {
-  color: #4D8471;
-  background-color: #FDFDFD;
-  border: 2px solid #FDFDFD;
-  border-radius: 20px; }
+  color: #CA3B35; }
 
 .dev {
   font-size: 100px; }
@@ -125,9 +124,6 @@ ul#navLi li a {
     margin-bottom: 10px;
     z-index: -100; }
 
-  ul#navLi li a:hover {
-    border: none; }
-
   .nav {
     position: fixed;
     z-index: 100;
@@ -138,8 +134,7 @@ ul#navLi li a {
     color: #150415;
     font-size: 30px !important;
     border: 2px solid #150415;
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 2px 6px 2px 6px;
+    padding: 2px 6px 1px 6px;
     border-radius: 4px;
     top: 0;
     right: 0;
