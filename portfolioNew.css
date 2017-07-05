@@ -81,12 +81,8 @@ ul#navLi li a {
 /* SKILLS SECTION STYLING */
 #skills {
   background-color: #4D8471;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  width: 100% !important;
-  padding: 0px 20px 100px 50px;
-  flex-basis: 1; }
+  padding-top: 50px;
+  padding-bottom: 100px; }
 
 #skillsTitle {
   text-align: center;
@@ -94,6 +90,14 @@ ul#navLi li a {
   padding-bottom: 50px;
   font-family: Quicksand;
   color: #150415; }
+
+.make-flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100% !important;
+  flex-basis: 1;
+  justify-content: center; }
 
 .flexIcon {
   padding: 20px;
@@ -105,6 +109,101 @@ ul#navLi li a {
 
 .dev {
   font-size: 100px; }
+
+#projects {
+  background-color: #314D50;
+  color: #FDFDFD;
+  font-family: Quicksand;
+  padding-bottom: 100px; }
+
+#projects-title {
+  margin-top: 0px;
+  padding-top: 50px;
+  text-align: center; }
+
+.flexImages {
+  display: flex;
+  transform: translateX(-700%);
+  transition: transform 1s ease;
+  align-items: center;
+  justify-content: center;
+  color: white; }
+
+.flexImages.open {
+  display: flex;
+  transform: translateX(0%); }
+
+.flexImages {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-basis: 75%;
+  flex-shrink: 1;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5%;
+  top: 20%;
+  left: 0%;
+  margin-right: 15px;
+  margin-left: 15px; }
+
+.flexImage:hover {
+  transform: opacity 0.5; }
+
+.flexImage.close {
+  display: none; }
+
+.flexImage {
+  display: block;
+  height: 230px;
+  width: 330px;
+  margin: 25px; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: 25px;
+  margin-left: 25px;
+  height: 230px;
+  width: 330px;
+  transition: 0.5s ease;
+  text-align: center;
+  flex-basis: auto;
+  background: rgba(255, 255, 255, 0); }
+
+.picContainer {
+  position: relative;
+  width: 330; }
+
+.overlay:hover {
+  background: rgba(0, 0, 0, 0.8); }
+  .overlay:hover .text {
+    opacity: 1; }
+
+.text {
+  opacity: 0;
+  color: #FDFDFD;
+  font-size: 25px;
+  position: absolute;
+  vertical-align: middle;
+  margin-top: 15%;
+  margin-left: 25%;
+  transition: opacity 1s ease; }
+
+a.projectLink {
+  color: white;
+  text-decoration: none; }
+
+a.projectLink:hover, a.projectLink:active, a.projectLink:focus, a.projectLink:visited {
+  color: inherit !important;
+  outline: none !important;
+  text-decoration: none !important; }
 
 @media screen and (max-width: 900px), (max-device-width: 900px) {
   /* NAVIGTION BAR */
