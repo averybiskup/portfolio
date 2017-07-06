@@ -246,6 +246,7 @@ a.projectLink:hover, a.projectLink:active, a.projectLink:focus, a.projectLink:vi
     position: fixed;
     z-index: 100;
     border-bottom: 1px solid #150415;
+    background-image: linear-gradient(#CA3B35);
     background-color: #CA3B35; }
 
   i.nav-toggle {
