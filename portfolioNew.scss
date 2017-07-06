@@ -282,7 +282,7 @@ a.projectLink:hover, a.projectLink:active, a.projectLink:focus, a.projectLink:vi
     position: fixed;
     z-index: 100;
     border-bottom: 1px solid $black;
-    background-image: linear-gradient($red);
+    background-image: none;
     background-color: $red;
   }
   i.nav-toggle {
