@@ -7,6 +7,16 @@ $darkGreen: #314D50;
 $brown: #31282B;
 $black: #150415;
 
+@mixin background-image($color1, $color2) {
+  background-image: $color1; /* For browsers that do not support gradients */
+  background-image: -webkit-linear-gradient($color1, $color2); /* For Safari 5.1 to 6.0 */
+  background-image: -o-linear-gradient($color1, $color2); /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient($color1, $color2); /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient($color1, $color2); /* Standard syntax */
+}
+
+
+
 body {
   background-color: $white !important;
 }
@@ -37,7 +47,7 @@ header {
   right: 0;
   left: 0;
   margin: 0;
-  background-color: $red;
+  background-image: linear-gradient($red, $red, $red, $red, $red, $red, $red, $red, transparent);
   height: 80px;
   position: fixed;
   z-index: -100;
@@ -72,7 +82,7 @@ ul#navLi li {
   border-radius: 5px;
 }
 ul#navLi li a {
-  border: 2px solid $red;
+  border: 2px solid transparent;
 }
 #avery {
   display: inline-block;
@@ -102,7 +112,7 @@ ul#navLi li a {
 
 /* SKILLS SECTION STYLING */
 #skills {
-  background-color: $green;
+  @include background-image($green, $darkGreen);
   padding-top: 50px;
   padding-bottom: 100px;
 }
@@ -124,10 +134,13 @@ ul#navLi li a {
 .flexIcon {
   padding: 20px;
   color: $white;
-  border: 2px solid $green;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  transition: border 2s ease, color 1s ease;;
 }
 .flexIcon:hover {
   color: $red;
+  border: 2px solid $red;
 }
 .dev {
   font-size: 100px;
@@ -146,6 +159,7 @@ ul#navLi li a {
 #projects-title {
   margin-top: 0px;
   padding-top: 50px;
+  padding-bottom: 50px;
   text-align: center;
 }
 
@@ -239,9 +253,9 @@ a.projectLink:hover, a.projectLink:active, a.projectLink:focus, a.projectLink:vi
   text-decoration: none !important;
 }
 
-
-
-@media screen and (min-width:1200px), (min-device-width:1200px) {
+@media screen and (min-width:1400px), (min-device-width:1400px) {
+  div.nav { padding-left: 15%; }
+  #dropNav {padding-right: 15%; }
 }
 
 
@@ -268,6 +282,7 @@ a.projectLink:hover, a.projectLink:active, a.projectLink:focus, a.projectLink:vi
     position: fixed;
     z-index: 100;
     border-bottom: 1px solid $black;
+    background-color: $red;
   }
   i.nav-toggle {
     display: inline-block !important;

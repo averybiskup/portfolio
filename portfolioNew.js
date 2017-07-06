@@ -48,5 +48,4 @@ $(document).ready(() => {
   $(window).on('scroll', function() { if ($(window).scrollTop() > 680 && $(window).scrollTop() < 900) $('.flexImages').addClass('open') })
 
 
-
 })
