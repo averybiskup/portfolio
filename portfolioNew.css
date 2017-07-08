@@ -1,6 +1,7 @@
 /* CURRENT PORTFOLIO */
 body {
-  background-color: #FDFDFD !important; }
+  background-color: #FDFDFD !important;
+  font-family: Quicksand; }
 
 a {
   color: inherit !important;
@@ -24,7 +25,7 @@ header {
   right: 0;
   left: 0;
   margin: 0;
-  background-image: linear-gradient(#CA3B35, #CA3B35, #CA3B35, #CA3B35, #CA3B35, #CA3B35, #CA3B35, #CA3B35, transparent);
+  background-color: #CA3B35;
   height: 80px;
   position: fixed;
   z-index: -100; }
@@ -218,6 +219,69 @@ a.projectLink:hover, a.projectLink:active, a.projectLink:focus, a.projectLink:vi
   outline: none !important;
   text-decoration: none !important; }
 
+/* CONTACT PAGE */
+#contact {
+  background-image: #314D50;
+  /* For browsers that do not support gradients */
+  background-image: -webkit-linear-gradient(#314D50, #150415);
+  /* For Safari 5.1 to 6.0 */
+  background-image: -o-linear-gradient(#314D50, #150415);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#314D50, #150415);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#314D50, #150415);
+  /* Standard syntax */
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-bottom: 500px; }
+
+#contact-title {
+  margin-top: 0px;
+  text-align: center;
+  color: #FDFDFD;
+  font-family: Quicksand; }
+
+.contact-input {
+  background-color: transparent;
+  border: 1px solid #FDFDFD;
+  height: 40px;
+  width: 300px;
+  display: block;
+  margin: 20px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  color: #FDFDFD;
+  resize: vertical; }
+
+.contact-input:hover, .contact-input:visited, .contact-input:focus, .contact-input:active {
+  outline: none; }
+
+.contact-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-flow: column;
+  margin-left: 15%; }
+
+#contact-text {
+  font-size: 20px;
+  color: #FDFDFD;
+  text-align: left;
+  display: block;
+  font-family: Quicksand;
+  max-height: 400px;
+  max-width: 400px;
+  flex-basis: 1;
+  padding: 10px;
+  margin-left: 20%;
+  margin-top: 20px; }
+
+.contact-large-flex-container {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
 @media screen and (min-width: 1400px), (min-device-width: 1400px) {
   div.nav {
     padding-left: 15%; }
@@ -246,7 +310,7 @@ a.projectLink:hover, a.projectLink:active, a.projectLink:focus, a.projectLink:vi
     position: fixed;
     z-index: 100;
     border-bottom: 1px solid #150415;
-    background-image: linear-gradient(#CA3B35);
+    background-image: none;
     background-color: #CA3B35; }
 
   i.nav-toggle {
@@ -265,6 +329,19 @@ a.projectLink:hover, a.projectLink:active, a.projectLink:focus, a.projectLink:vi
     cursor: pointer; }
 
   .navWrapper {
-    text-align: right; } }
+    text-align: right; }
+
+  .contact-flex-container {
+    margin-left: 0px;
+    align-items: center; }
+
+  .contact-large-flex-container {
+    flex-direction: column;
+    margin: 0;
+    align-items: center; }
+
+  #contact-text {
+    margin-top: 20px;
+    margin-left: 0px; } }
 
 /*# sourceMappingURL=portfolioNew.css.map */
