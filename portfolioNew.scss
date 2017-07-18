@@ -7,16 +7,9 @@ $darkGreen: #314D50;
 $brown: #31282B;
 $black: #150415;
 
-@mixin background-image($color1, $color2) {
-  background-image: $color1; /* For browsers that do not support gradients */
-  background-image: -webkit-linear-gradient($color1, $color2); /* For Safari 5.1 to 6.0 */
-  background-image: -o-linear-gradient($color1, $color2); /* For Opera 11.1 to 12.0 */
-  background-image: -moz-linear-gradient($color1, $color2); /* For Firefox 3.6 to 15 */
-  background-image: linear-gradient($color1, $color2); /* Standard syntax */
+html {
+  width: 100%;
 }
-
-
-
 body {
   background-color: $white !important;
   font-family: Quicksand;
@@ -52,6 +45,7 @@ header {
   height: 80px;
   position: fixed;
   z-index: -100;
+  width: 100%;
 }
 i.nav-toggle {
   display: none !important;
@@ -113,7 +107,7 @@ ul#navLi li a {
 
 /* SKILLS SECTION STYLING */
 #skills {
-  @include background-image($green, $darkGreen);
+  background-color: $green;
   padding-top: 50px;
   padding-bottom: 100px;
 }
@@ -157,6 +151,7 @@ ul#navLi li a {
   font-family: Quicksand;
   padding-bottom: 100px;
 }
+
 #projects-title {
   margin-top: 0px;
   padding-top: 50px;
@@ -257,10 +252,10 @@ a.projectLink:hover, a.projectLink:active, a.projectLink:focus, a.projectLink:vi
 
 /* CONTACT PAGE */
 #contact {
-  @include background-image($darkGreen, $black);
+  background-color: #40443E;
   margin-top: 0px;
-  padding-top: 0px;
-  padding-bottom: 500px;
+  padding-top: 60px;
+  padding-bottom: 300px;
 }
 #contact-title {
   margin-top: 0px;
@@ -289,7 +284,6 @@ a.projectLink:hover, a.projectLink:active, a.projectLink:focus, a.projectLink:vi
   flex-wrap: wrap;
   flex-direction: column;
   flex-flow: column;
-  margin-left: 15%;
 }
 #contact-text {
   font-size: 20px;
@@ -301,13 +295,14 @@ a.projectLink:hover, a.projectLink:active, a.projectLink:focus, a.projectLink:vi
   max-width: 400px;
   flex-basis: 1;
   padding: 10px;
-  margin-left: 20%;
   margin-top: 20px;
+  padding-left: 40px;
 }
 .contact-large-flex-container {
   display: flex !important;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 
@@ -365,18 +360,23 @@ a.projectLink:hover, a.projectLink:active, a.projectLink:focus, a.projectLink:vi
     margin-left: 0px;
     align-items: center;
   }
-  .contact-large-flex-container {
-    flex-direction: column;
-    margin: 0;
-    align-items: center;
-  }
   #contact-text {
     margin-top: 20px;
     margin-left: 0px;
   }
+  .flex-contact-text {
+  }
 
 }
 @media screen and (max-width:600px), (max-device-width:600px) {
+  #contact-text {
+    padding-left: 20px;
+    width: 100%;
+  }
+  .contact-flex-container {
+    width: 100%;
+  }
 }
+
 @media screen and (max-width:320px), (max-device-width:320px) {
 }
